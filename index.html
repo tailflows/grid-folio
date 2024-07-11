@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frima</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: '#fafafa',
+                100: '#f5f5f5',
+                200: '#e5e5e5',
+                300: '#d4d4d4',
+                400: '#a3a3a3',
+                500: '#737373',
+                600: '#525252',
+                700: '#404040',
+                800: '#262626',
+                900: '#171717',
+                950: '#0a0a0a',
+              },
+              accent: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                200: '#fed7aa',
+                300: '#fdba74',
+                400: '#fb923c',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+                800: '#9a3412',
+                900: '#7c2d12',
+                950: '#431407',
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+      }
+      @media only screen and (min-width: 1024px) {
+        main {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          grid-template-rows: repeat(9, auto);
+          grid-template-areas:
+            'i c r p1'
+            'i c r p1'
+            'i d d p1'
+            's d d b'
+            's d d b'
+            's d d b'
+            'n n t t'
+            'n n t t'
+            'f f f f';
+        }
+
+        .grid-i {
+          grid-area: i;
+        }
+        .grid-c {
+          grid-area: c;
+        }
+        .grid-r {
+          grid-area: r;
+        }
+        .grid-p1 {
+          grid-area: p1;
+        }
+        .grid-b {
+          grid-area: b;
+        }
+        .grid-d {
+          grid-area: d;
+        }
+        .grid-d2 {
+          grid-area: d2;
+        }
+        .grid-s {
+          grid-area: s;
+        }
+        .grid-n {
+          grid-area: n;
+        }
+        .grid-t {
+          grid-area: t;
+        }
+        .grid-f {
+          grid-area: f;
+        }
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-primary-50 dark:bg-primary-950">
+    <main class="max-w-[100rem] mx-auto px-2 md:px-4 min-h-dvh gap-4 p-2">
+      <section class="p-2 border rounded-md md:p-4 grid-i">
+        <div class="space-y-8">
+          <div class="flex">
+            <img
+              class="w-12 h-12 mr-2 rounded-full"
+              src="https://blog.gederooney.me/_next/image?url=%2Fstatic%2Fimages%2Favatar.png&w=96&q=75"
+              alt="" />
+            <div class="">
+              <h1 class="text-2xl font-bold">Rony Gédéon</h1>
+              <p class="text-sm">Développeur web fullstack</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <p class="text-3xl font-medium font">
+              <span
+                class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-950 to-accent-600"
+                >Bonjour</span
+              >, bienvenue sur mon portfolio.
+            </p>
+            <p class="text-sm font-light text-primary-700">
+              Je suis un développeur web fullstack. J'ai eu la chance de faire
+              le cursus 42 à Québec étant de la première cohorte.
+            </p>
+            <p class="text-sm font-light text-primary-700">
+              J'ai travaillé sur plusieurs projets personnels et professionnels
+              que vous pouvez retrouver sur mon github.
+            </p>
+            <p class="text-sm font-light text-primary-700">
+              Je suis actuellement à la recherche d'un emploi dans une équipe
+              dynamique au sein de laquelle je pourrais apporter mon expertise.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="border rounded-md grid-c">
+        <div class="p-4">
+          <h2 class="text-[4rem] leading-tight">Contactez moi</h2>
+          <div
+            class="grid justify-center w-full grid-cols-4 gap-4 mt-4 md:grid-cols-8 lg:grid-cols-4 gap-y-4">
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-mail group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+                <path d="M3 7l9 6l9 -6"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-brand-github group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-brand-behance group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 18v-12h4.5a3 3 0 0 1 0 6a3 3 0 0 1 0 6h-4.5"></path>
+                <path d="M3 12l4.5 0"></path>
+                <path
+                  d="M14 13h7a3.5 3.5 0 0 0 -7 0v2a3.5 3.5 0 0 0 6.64 1"></path>
+                <path d="M16 6l3 0"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler icon-tabler-brand-threads group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-dribbble"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                <path d="M9 3.6c5 6 7 10.5 7.5 16.2"></path>
+                <path d="M6.4 19c3.5 -3.5 6 -6.5 14.5 -6.4"></path>
+                <path d="M3.1 10.75c5 0 9.814 -.38 15.314 -5"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-x"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+            </a>
+            <a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-linkedin"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                <path d="M8 11l0 5"></path>
+                <path d="M8 8l0 .01"></path>
+                <path d="M12 16l0 -5"></path>
+                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+              </svg> </a
+            ><a
+              href="#_"
+              class="flex items-center justify-center w-12 h-12 transition-all duration-300 rounded-lg shadow-xl aspect-square dark:shadow-thick hover:bg-primary-100 dark:hover:bg-primary ring-1 bg-primary-50 dark:ring-primary-50/10 ring-accent-500/50 dark:bg-tertiary hover:ring-accent-500/50 dark:hover:ring-primary-50/20 group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 duration-300 icon icon-tabler group-hover:scale-125 text-primary dark:text-primary-50 group-hover text-primary:dark:text-primary-50/50 icon-tabler-brand-facebook"
+                viewBox="0 0 24 24"
+                stroke-width="0.8"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="border rounded-md grid-r">
+        <div class="p-4 space-y-4">
+          <h2 class="text-[4rem] leading-tight">
+            Pour les
+            <span class="text-accent-600">recruteurs</span>
+          </h2>
+          <p class="text-sm font-light text-primary-700">
+            Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous
+          </p>
+          <button
+            class="block w-full p-3 text-center rounded-md text-primary-50 bg-accent-600">
+            Télécharger
+          </button>
+        </div>
+      </section>
+      <section class="border rounded-md grid-p1">
+        <div class="p-4 space-y-4">
+          <div>
+            <h2 class="text-xl font-bold">Projets-1</h2>
+            <p class="text-sm font-light text-primary-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              ullamcorper.
+            </p>
+            <img
+              src="https://stablo-template.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcijrdavx%2Fproduction%2F05951a0ec1a6ffc54f615ab160649e92fea982d0-800x764.png%3Frect%3D0%2C0%2C800%2C468%26w%3D800%26auto%3Dformat&w=1080&q=75"
+              alt="" />
+          </div>
+          <div>
+            <h2 class="text-xl font-bold">Projets-2</h2>
+            <p class="text-sm font-light text-primary-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              ullamcorper.
+            </p>
+            <img
+              src="https://stablo-template.vercel.app/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcijrdavx%2Fproduction%2F2fda477a7e32f813abb9a8ef425939e6a91c7973-987x1481.png%3Frect%3D0%2C279%2C987%2C607%26w%3D987%26auto%3Dformat&w=1080&q=75"
+              alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="border rounded-md grid-b">
+        <div class="p-4">
+          <h2 class="text-xl font-bold">Blog</h2>
+          <ul class="space-y-4">
+            <li>
+              <a href="#_" class="block p-2">
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h3>
+                <p class="text-sm font-light text-primary-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  ullamcorper, nunc nec lacinia ultricies.
+                  <span class="text-accent-600"> Lire </span>
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#_" class="block p-2">
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h3>
+                <p class="text-sm font-light text-primary-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  ullamcorper, nunc nec lacinia ultricies.
+                  <span class="text-accent-600"> Lire </span>
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#_" class="block p-2">
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h3>
+                <p class="text-sm font-light text-primary-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  ullamcorper, nunc nec lacinia ultricies.
+                  <span class="text-accent-600"> Lire </span>
+                </p>
+              </a>
+            </li>
+
+            <li>
+              <a href="#_" class="block p-2">
+                <h3>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </h3>
+                <p class="text-sm font-light text-primary-700">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  ullamcorper, nunc nec lacinia ultricies.
+                  <span class="text-accent-600"> Lire </span>
+                </p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="border rounded-md grid-d">
+        <div class="flex flex-col p-4 space-y-4">
+          <h2 class="text-4xl font-bold">Tailflows</h2>
+
+          <p class="text-sm font-light text-primary-700">
+            Un ecosysteme complet pour les développeurs utilisant Tailwind CSS.
+          </p>
+
+          <p class="text-sm font-light text-primary-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            ullamcorper, nunc nec lacinia ultricies, nunc nisl tincidunt lorem,
+            nec tincidunt nunc nisl nec nunc. Nullam nec nunc
+          </p>
+          <img
+            src="https://primapersona.lexingtonthemes.com/images/monomod.png"
+            class="flex-1 object-cover duration-300 rounded-2xl group-hover:ring-white/20 invert dark:invert-0 aspect-square bg-primary/5 dark:bg-primary ring-1 ring-white/10"
+            alt="" />
+        </div>
+      </section>
+      <section class="border rounded-md grid-s">
+        <div class="p-4 space-y-8">
+          <h2 class="text-xl font-bold">Services</h2>
+          <p class="text-sm font-light text-primary-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            ullamcorper, nunc nec lacinia ultricies.
+          </p>
+          <ul class="space-y-8 group">
+            <li class="cursor-pointer group">
+              <div class="flex items-center gap-2">
+                <span
+                  class="inline-block w-10 h-10 p-1 border rounded-full group-hover:bg-primary-100">
+                  <svg
+                    class="w-full h-full fill-current"
+                    viewBox="0 0 52 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M41.8656 1C42.4144 1 42.9225 1.28972 43.202 1.76206L45.8006 6.15385C45.8194 6.18571 45.8537 6.20526 45.8907 6.20526C45.9276 6.20526 45.9619 6.18579 45.9807 6.15404L48.5941 1.7585C48.8737 1.28821 49.3804 1 49.9275 1C51.1386 1 51.8826 2.32574 51.2517 3.35946L48.674 7.58277C48.2798 8.22862 48.2838 9.04163 48.6844 9.68354L51.2997 13.8747C51.9514 14.9191 51.2006 16.2727 49.9695 16.2727C49.4191 16.2727 48.909 15.9841 48.6255 15.5123L45.981 11.1112C45.962 11.0794 45.9276 11.06 45.8906 11.06C45.8536 11.06 45.8193 11.0794 45.8002 11.1112L43.1534 15.5163C42.8714 15.9856 42.3639 16.2727 41.8164 16.2727C40.5909 16.2727 39.8441 14.9243 40.4944 13.8855L43.1221 9.68759C43.5252 9.04365 43.5287 8.22693 43.1311 7.5796L40.5425 3.36549C39.907 2.33089 40.6514 1 41.8656 1Z"
+                      fill="currentColor" />
+                    <path
+                      d="M35.4336 2.61452C35.4336 1.72285 36.1564 1 37.0481 1C37.9398 1 38.6626 1.72285 38.6626 2.61452V10.9183C38.6626 12.032 38.3967 13.0064 37.8647 13.8416C37.3377 14.6768 36.5994 15.3281 35.6499 15.7955C34.7003 16.2578 33.5941 16.489 32.3313 16.489C31.0636 16.489 29.9549 16.2578 29.0053 15.7955C28.0558 15.3281 27.3175 14.6768 26.7905 13.8416C26.2635 13.0064 26 12.032 26 10.9183V2.61452C26 1.72285 26.7229 1 27.6145 1C28.5062 1 29.2291 1.72285 29.2291 2.61452V10.6424C29.2291 11.2241 29.3558 11.7411 29.6094 12.1935C29.8679 12.646 30.2308 13.0014 30.6982 13.2599C31.1655 13.5185 31.7099 13.6477 32.3313 13.6477C32.9577 13.6477 33.5021 13.5185 33.9645 13.2599C34.4318 13.0014 34.7923 12.646 35.0458 12.1935C35.3043 11.7411 35.4336 11.2241 35.4336 10.6424V2.61452Z"
+                      fill="currentColor" />
+                    <path
+                      d="M23.9346 0C24.8041 0 25.4366 0.825258 25.2106 1.66485L21.0001 17.3076C20.8448 17.8845 20.3216 18.2855 19.7241 18.2855C18.8546 18.2855 18.2221 17.4603 18.4481 16.6207L22.6587 0.977945C22.814 0.400966 23.3371 0 23.9346 0Z"
+                      fill="currentColor" />
+                    <path
+                      d="M15.6145 0.727272C16.5062 0.727272 17.229 1.45012 17.229 2.3418V14.3855C17.229 15.2772 16.5062 16 15.6145 16C14.7228 16 14 15.2772 14 14.3855V2.3418C14 1.45012 14.7228 0.727272 15.6145 0.727272Z"
+                      fill="currentColor" />
+                    <path
+                      d="M9.76102 2.3418C9.76102 1.45012 10.4839 0.727272 11.3755 0.727272C12.2672 0.727272 12.9901 1.45012 12.9901 2.3418V10.6456C12.9901 11.7592 12.7241 12.7337 12.1921 13.5689C11.6651 14.4041 10.9269 15.0554 9.97728 15.5227C9.02771 15.9851 7.92153 16.2163 6.65874 16.2163C5.39099 16.2163 4.28232 15.9851 3.33275 15.5227C2.38318 15.0554 1.64489 14.4041 1.11791 13.5689C0.590917 12.7337 0.327423 11.7592 0.327423 10.6456V2.3418C0.327423 1.45012 1.05027 0.727272 1.94195 0.727272C2.83362 0.727272 3.55647 1.45012 3.55647 2.3418V10.3697C3.55647 10.9513 3.68325 11.4684 3.9368 11.9208C4.19532 12.3732 4.55825 12.7287 5.02558 12.9872C5.49291 13.2457 6.0373 13.375 6.65874 13.375C7.28517 13.375 7.82955 13.2457 8.29191 12.9872C8.75924 12.7287 9.11968 12.3732 9.37323 11.9208C9.63176 11.4684 9.76102 10.9513 9.76102 10.3697V2.3418Z"
+                      fill="currentColor" />
+                  </svg>
+                </span>
+                <p class="font-medium">Design</p>
+              </div>
+              <p class="text-sm font-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                ullamcorper, nunc nec lacinia ultricies.
+              </p>
+            </li>
+            <li class="group">
+              <div class="flex items-center gap-2">
+                <span class="inline-block w-10 h-10 p-2 border rounded-full">
+                  <svg
+                    class="w-full h-full stroke-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                </span>
+                <p>Consultation</p>
+              </div>
+              <p class="text-sm font-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                ullamcorper, nunc nec lacinia ultricies.
+              </p>
+            </li>
+            <li class="group">
+              <div class="flex items-center gap-2">
+                <span class="inline-block w-10 h-10 p-2 border rounded-full">
+                  <svg
+                    class="w-full h-full fill-current"
+                    viewBox="0 0 61 31"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M60.75 16.0622C60.75 17.4908 59.9061 18.7846 58.5986 19.3603L45.3795 25.1812C43.7611 25.8938 41.944 24.7085 41.944 22.9402C41.944 21.94 42.5523 21.0404 43.4804 20.6678L54.6776 16.1727C54.7227 16.1546 54.7647 16.2045 54.7391 16.2458C54.7125 16.2888 54.6461 16.27 54.6461 16.2193V15.9051C54.6461 15.8544 54.7125 15.8355 54.7391 15.8786C54.7647 15.9199 54.7227 15.9698 54.6776 15.9517L43.4804 11.4566C42.5523 11.084 41.944 10.1844 41.944 9.1842C41.944 7.41583 43.7611 6.23053 45.3795 6.94318L58.5986 12.7641C59.9061 13.3398 60.75 14.6336 60.75 16.0622Z"
+                      fill="currentColor" />
+                    <path
+                      d="M38.297 0.699946C39.8129 1.05651 40.5772 2.75469 39.8388 4.12582L26.0831 29.6717C25.5757 30.6139 24.4992 31.0985 23.4574 30.8534C21.9415 30.4969 21.1772 28.7987 21.9155 27.4275L35.6713 1.8817C36.1787 0.939443 37.2552 0.454914 38.297 0.699946Z"
+                      fill="currentColor" />
+                    <path
+                      d="M2.9014 19.3603C1.59393 18.7846 0.75 17.4908 0.75 16.0622C0.75 14.6336 1.59393 13.3398 2.9014 12.7641L16.1205 6.94318C17.7389 6.23053 19.556 7.41583 19.556 9.1842C19.556 10.1844 18.9477 11.084 18.0196 11.4566L6.82237 15.9517C6.77732 15.9698 6.73532 15.9199 6.76088 15.8786C6.78753 15.8355 6.85393 15.8544 6.85393 15.9051V16.2193C6.85393 16.27 6.78753 16.2888 6.76088 16.2458C6.73532 16.2045 6.77732 16.1546 6.82237 16.1727L18.0196 20.6678C18.9477 21.0404 19.556 21.94 19.556 22.9402C19.556 24.7085 17.7389 25.8938 16.1205 25.1812L2.9014 19.3603Z"
+                      fill="currentColor" />
+                  </svg>
+                </span>
+                <p>Programmation</p>
+              </div>
+              <p class="text-sm font-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                ullamcorper, nunc nec lacinia ultricies.
+              </p>
+            </li>
+            <li class="group">
+              <div class="flex items-center gap-2">
+                <span class="inline-block w-10 h-10 p-2 border rounded-full">
+                  <svg
+                    class="w-full h-full fill-current"
+                    viewBox="0 0 61 31"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M60.75 16.0622C60.75 17.4908 59.9061 18.7846 58.5986 19.3603L45.3795 25.1812C43.7611 25.8938 41.944 24.7085 41.944 22.9402C41.944 21.94 42.5523 21.0404 43.4804 20.6678L54.6776 16.1727C54.7227 16.1546 54.7647 16.2045 54.7391 16.2458C54.7125 16.2888 54.6461 16.27 54.6461 16.2193V15.9051C54.6461 15.8544 54.7125 15.8355 54.7391 15.8786C54.7647 15.9199 54.7227 15.9698 54.6776 15.9517L43.4804 11.4566C42.5523 11.084 41.944 10.1844 41.944 9.1842C41.944 7.41583 43.7611 6.23053 45.3795 6.94318L58.5986 12.7641C59.9061 13.3398 60.75 14.6336 60.75 16.0622Z"
+                      fill="currentColor" />
+                    <path
+                      d="M38.297 0.699946C39.8129 1.05651 40.5772 2.75469 39.8388 4.12582L26.0831 29.6717C25.5757 30.6139 24.4992 31.0985 23.4574 30.8534C21.9415 30.4969 21.1772 28.7987 21.9155 27.4275L35.6713 1.8817C36.1787 0.939443 37.2552 0.454914 38.297 0.699946Z"
+                      fill="currentColor" />
+                    <path
+                      d="M2.9014 19.3603C1.59393 18.7846 0.75 17.4908 0.75 16.0622C0.75 14.6336 1.59393 13.3398 2.9014 12.7641L16.1205 6.94318C17.7389 6.23053 19.556 7.41583 19.556 9.1842C19.556 10.1844 18.9477 11.084 18.0196 11.4566L6.82237 15.9517C6.77732 15.9698 6.73532 15.9199 6.76088 15.8786C6.78753 15.8355 6.85393 15.8544 6.85393 15.9051V16.2193C6.85393 16.27 6.78753 16.2888 6.76088 16.2458C6.73532 16.2045 6.77732 16.1546 6.82237 16.1727L18.0196 20.6678C18.9477 21.0404 19.556 21.94 19.556 22.9402C19.556 24.7085 17.7389 25.8938 16.1205 25.1812L2.9014 19.3603Z"
+                      fill="currentColor" />
+                  </svg>
+                </span>
+                <p>Community Management</p>
+              </div>
+              <p class="text-sm font-light">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                ullamcorper, nunc nec lacinia ultricies.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="border rounded-md grid-n">
+        <div class="p-4 space-y-4">
+          <div class="">
+            <h2 class="text-4xl font-bold">Boite aux lettres</h2>
+            <p class="text-sm font-light text-primary-700">
+              Inscrivez-vous à notre newsletter pour recevoir les dernières
+              nouvelles et mises à jour.
+            </p>
+          </div>
+          <form action="" autocomplete="off">
+            <div
+              class="relative flex items-center h-12 px-2 py-1 overflow-hidden border rounded-md focus-within:border-accent-500">
+              <label for="email" class="sr-only"> Email </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Votre email"
+                class="w-full p-3 text-sm bg-transparent outline-none text-primary-950 focus:outline-none"
+                required />
+              <button class="block h-full px-4 rounded-md hover:bg-primary-100">
+                M'inscrire
+              </button>
+            </div>
+            <div>
+              <p class="text-xs font-light text-right">
+                En vous inscrivant, vous acceptez de recevoir des emails de
+                notre part. Vous pouvez vous désinscrire à tout moment.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="border rounded-md grid-t">testimonials</section>
+      <footer
+        class="flex items-center justify-center p-4 text-xs text-center rounded-md text-primary-50 grid-f bg-accent-600 font-extralight">
+        <p>&copy; 2024 Rony Gédéon. Tous droits réservés.</p>
+      </footer>
+    </main>
+  </body>
+</html>
